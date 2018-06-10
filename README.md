@@ -19,21 +19,21 @@
 ![](https://i.imgur.com/x9Q5gMQ.png)
 ### 2.作为其他项目的一个子模块传入源码，直接返回标题，发布时间，文章内容
 ### 1）克隆项目代码解压放入自己的项目中，然后在该模块的同级目录创建自己的测试脚本，加入以下代码如下图：
-    `#!/usr/bin/env python
-    `# coding=utf-8
+     #!/usr/bin/env python
+     # coding=utf-8
 
-    `import requests
-    `from getContent.articleExtractor import *
+     import requests
+     from getContent.articleExtractor import *
 
-    `url = 'http://www.takefoto.cn/viewnews-1486870.html'
-    `htmlCode = requests.get(url).text
-    `msg = getResult(url, htmlCode)
-    `print(msg['newsTitle'])
-    `print('='*100)
-    `print(msg['publicTime'])
-    `print('='*100)
-    `print(msg['article'])
-    `print('='*100)`
+     url = 'http://www.takefoto.cn/viewnews-1486870.html'
+     htmlCode = requests.get(url).text
+     msg = getResult(url, htmlCode)
+     print(msg['newsTitle'])
+     print('='*100)
+     print(msg['publicTime'])
+     print('='*100)
+     print(msg['article'])
+     print('='*100)
 ![](https://i.imgur.com/60Pr0YX.png)
 ### 2）在终端运行python demo.py，回车，效果如下：
 ![](https://i.imgur.com/JzVK67n.png)
