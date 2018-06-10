@@ -1,0 +1,5 @@
+requests==2.10.0
+jieba==0.38
+beautifulsoup4==4.4.1
+lxml==3.5.0
+pycurl==7.43.0
